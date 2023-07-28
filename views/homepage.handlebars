@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> MVC Blog </title>
+</head>
+<body>
+  <h1>Post Your Blog Here!</h1>
+  <ul>
+    {{#each posts}}
+      <li>
+        <h2>{{this.title}}</h2>
+        <p>{{this.content}}</p>
+        <p>Author {{this.User.username}} on {{formatDate this.createdAt}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>
